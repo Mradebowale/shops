@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOW ARE YOU</title>
+</head>
+<body>
+    {% for product in all_products %}
+   <a href="{%url 'singleproduct' product.id%}">{{product.name}}</a>  - {{product.price}}
+    <br>
+    {% endfor %}
+
+    <a href="{%url 'contact' %}">CONTACT US</a>
+</body>
+</html>
